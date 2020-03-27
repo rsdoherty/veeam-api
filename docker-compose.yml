@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  app:
+    build: .
+    image: app
+    command: python3 /app/app.py
+    ports:
+      - "8888:8888"
+    environment:
+      database_server: SERVER_ADDRESS
+      database_user: SERVICE_ACCOUNT
+      database_password: SERVICE_ACCOUNT_PASSWORD
+      days_to_return: 1
